@@ -3,6 +3,7 @@ services:
   cnil-pia-back:
     container_name: LINCnil-pia-back
     build: docker/cnil-pia-back
+    image: cnil-pia-back:${TAG}
     restart: always
     environment:
       DATABASE_HOST: 'database'
@@ -19,6 +20,7 @@ services:
   cnil-pia-front:
     container_name: LINCnil-pia-front
     build: docker/cnil-pia-front
+    image: cnil-pia-front:${TAG}
     restart: always
     ports:
       - 0.0.0.0:8080:80
